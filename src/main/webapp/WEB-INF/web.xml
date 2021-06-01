@@ -47,17 +47,13 @@
 	<servlet>
 		<description>
 		</description>
-		<display-name>UsuarioServlet</display-name>
-		<servlet-name>UsuarioServlet</servlet-name>
-		<servlet-class>br.com.bank.controller.UsuarioServlet</servlet-class>
+		<display-name>UserServlet</display-name>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>br.com.bank.controller.UserServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ContatoServlet</servlet-name>
 		<url-pattern>/contatoServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>UsuarioServlet</servlet-name>
-		<url-pattern>/usuarioServlet</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>

@@ -9,7 +9,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import br.com.bank.model.Contato;
+import br.com.bank.model.Contact;
 import br.com.bank.util.JPAUtil;
 
 /**
@@ -19,7 +19,7 @@ import br.com.bank.util.JPAUtil;
 public class ContatoDaoImpl implements ContatoDao {
 
 	@Override
-	public void salvar(Contato contato) {
+	public void salvar(Contact contato) {
 		EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 		entityManager.getTransaction().begin();
 		try {
@@ -35,12 +35,12 @@ public class ContatoDaoImpl implements ContatoDao {
 	}
 
 	@Override
-	public List<Contato> list() {
+	public List<Contact> list() {
 		EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 		entityManager.getTransaction().begin();
 		
-		Query query = entityManager.createQuery("SELECT c FROM Contato c");
-		List<Contato> contatos = query.getResultList();
+		Query query = entityManager.createQuery("SELECT c FROM Contact c");
+		List<Contact> contatos = query.getResultList();
 		return contatos;
 		
 	}

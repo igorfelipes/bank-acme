@@ -9,6 +9,11 @@
 		
 		<div class="container-fluid">
           <div class="row">
+             <div class="col-md-12">
+   				<c:if test="${not empty errorRegister}">
+   					<div class="alert alert-danger">${errorRegister}</div>
+   				</c:if>
+            </div>
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
@@ -16,7 +21,7 @@
                   <p class="card-category">Preencha os Campos</p>
                 </div>
                 <div class="card-body">
-                  <form action="${pageContext.request.contextPath}/usuarioServlet?&acao=cadastrar" method="POST">
+                  <form action="${pageContext.request.contextPath}/UserServlet?&action=register" method="POST">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">

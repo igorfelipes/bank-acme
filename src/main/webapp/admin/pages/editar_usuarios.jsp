@@ -15,8 +15,8 @@
                   <h4 class="card-title">Edição de Usuario</h4>
                 </div>
                 <div class="card-body">
-                  <form action="${pageContext.request.contextPath}/usuarioServlet?&acao=editar" method="POST"
-                  oninput='password2.setCustomValidity(password2.value != password.value ? "As senhas precisam ser iguais." : "")'>
+                  <form action="${pageContext.request.contextPath}/UserServlet?&action=edit" method="POST"
+                  oninput='passwordRepeat.setCustomValidity(passwordRepeat.value != password.value ? "Password does not match" : "")'>
                     <div class="row">
                       <c:if test="${usuario != null}">
                       	<div class="form-group">
@@ -24,20 +24,20 @@
                       	</div>
                       	<div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Novo Usuario</label>
+                          <label class="bmd-label-floating">New username</label>
                           <input type="email" name="username" class="form-control" maxlength="60" required="required" value="${usuario.username}">
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Nova Senha</label>
+                          <label class="bmd-label-floating">New password</label>
                           <input type="password" name="password" class="form-control" maxlength="20" required="required" value="${usuario.password}">
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Repetir Nova Senha</label>
-                          <input type="password" name="password2" class="form-control" maxlength="20" required="required" value="${usuario.password}">
+                          <label class="bmd-label-floating">Repeat new password</label>
+                          <input type="password" name="passwordRepeat" class="form-control" maxlength="20" required="required" value="${usuario.password}">
                         </div>
                       </div>
                       </c:if>
@@ -47,7 +47,7 @@
                 </div>
               </div>
                <a class="btn btn-primary"
-                 href="${pageContext.request.contextPath}/usuarioServlet?&acao=listar">Voltar</a>
+                 href="${pageContext.request.contextPath}/UserServlet?&action=list">Back</a>
             </div>
           </div>
         </div>

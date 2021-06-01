@@ -9,48 +9,45 @@
 		<div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
-   				<c:if test="${not empty sucesso}">
-   					<div class="alert alert-success">${sucesso}</div>
+   				<c:if test="${not empty success}">
+   					<div class="alert alert-success">${success}</div>
    				</c:if>
             </div>
             
             <div class="col-md-12">
-   				<c:if test="${not empty removido}">
-   					<div class="alert alert-success">${removido}</div>
+   				<c:if test="${not empty removed}">
+   					<div class="alert alert-success">${removed}</div>
    				</c:if>
             </div>
             
             <div class="table table-responsive table-striped table-hover">
                     <table class="table">
                       <thead class=" text-primary">
-                      	  <th scope="col">Editar</th>
-                      	  <th scope="col">Remover</th>
                        	  <th scope="col">ID</th>
-					      <th scope="col">Usuario</th>
-					      <th scope="col">Senha</th>
+					      <th scope="col">User</th>
+                          <th scope="col">Edit</th>
+                      	  <th scope="col">Delete</th>
                       </thead>
                       <tbody>
-                        <c:forEach var="usuario" items="${usuarios}">
+                        <c:forEach var="user" items="${users}">
                         	<tr>
-                        	
-                        		<td>
+                        		<td><c:out value="${user.id}"></c:out></td>
+                        		<td><c:out value="${user.username}"></c:out></td>
+                    		    <td>
                         			<a class="btn btn-primary" 
-                        				href="${pageContext.request.contextPath}/usuarioServlet?id=${usuario.id}&user=${usuario.username}&password=${usuario.password}&acao=editar">
-                        				<c:out value="Editar"/>
+                        				href="${pageContext.request.contextPath}/UserServlet?id=${user.id}&user=${user.username}&password=${user.password}&action=edit">
+                        				<c:out value="Edit"/>
                         			</a>
   
                         		</td>
                         		
                         		<td>
 									<a class="btn btn-danger" 
-                        				href="${pageContext.request.contextPath}/usuarioServlet?id=${usuario.id}&acao=remover">
-                        				<c:out value="Remover"/>
+                        				href="${pageContext.request.contextPath}/UserServlet?id=${user.id}&action=delete">
+                        				<c:out value="Delete"/>
                         			</a>
                         		</td>
                         	
-                        		<td><c:out value="${usuario.id}"></c:out></td>
-                        		<td><c:out value="${usuario.username}"></c:out></td>
-                        		<td><c:out value="******"></c:out></td>
                         		                		
                         	</tr>
                   

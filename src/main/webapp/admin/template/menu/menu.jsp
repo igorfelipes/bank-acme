@@ -14,13 +14,13 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="${pageContext.request.contextPath}/usuarioServlet?acao=cadastro">
+            <a class="nav-link" href="${pageContext.request.contextPath}/UserServlet?action=register">
               <i class="material-icons">add_circle</i>
               <p>Cadastrar Usuarios</p>
             </a>
           </li>
            <li class="nav-item ">
-            <a class="nav-link" href="${pageContext.request.contextPath}/usuarioServlet?acao=listar">
+            <a class="nav-link" href="${pageContext.request.contextPath}/UserServlet?action=list">
               <i class="material-icons">view_list</i>
               <p>Listar Usuarios</p>
             </a>

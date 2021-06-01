@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.bank.model.Contato;
+import br.com.bank.model.Contact;
 import br.com.bank.service.ContatoServiceImpl;
 
 /**
@@ -20,12 +20,12 @@ public class ContatosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	
-	private Contato contato;
+	private Contact contato;
 	private ContatoServiceImpl service;
 	
 	public ContatosServlet() {
 		this.service = new ContatoServiceImpl();
-		this.contato = new Contato();
+		this.contato = new Contact();
 	}
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,7 +54,7 @@ public class ContatosServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-			this.contato = new Contato();
+			this.contato = new Contact();
 			this.contato.setNome(request.getParameter("nome"));
 			this.contato.setEmail(request.getParameter("email"));
 			

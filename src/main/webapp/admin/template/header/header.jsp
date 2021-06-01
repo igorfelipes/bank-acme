@@ -22,7 +22,7 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="${pageContext.request.contextPath}/LoginServlet">Log out</a>
+                  <a class="dropdown-item" href="${pageContext.request.contextPath}/LoginServlet?action=logout">Log out</a>
                 </div>
               </li>
             </ul>

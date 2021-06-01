@@ -27,7 +27,7 @@ import lombok.Setter;
 
 @Entity
 @Table(name ="contatos")
-public class Contato {
+public class Contact {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
