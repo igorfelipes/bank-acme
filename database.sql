@@ -1,7 +1,7 @@
 --
 -- Banco de dados: `acme`
 -- Nome do grupo: Conto de fadas
--- Membros: Igor Felipe Sales, Marlysson Xaview, Rodrigo Henrique
+-- Membros: Igor Felipe Sales, Marlyson Xavier, Rodrigo Henrique
 --
 
 START TRANSACTION;
