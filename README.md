@@ -21,3 +21,4 @@ git clone https://github.com/igorfelipes/bank-acme.git
 
 5. Configure o Tomcat na sua máquina
 6. Execute o projeto no servidor tomcat
+7. Faça o login com algum usuário criado no script sql. Exemplo: username: admin@admin.com, password: 12345
